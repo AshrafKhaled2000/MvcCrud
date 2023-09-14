@@ -1,0 +1,47 @@
+﻿@model mypro.Conrext.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center text-warning">Profile Details</h2>
+
+<div class="card">
+    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
+    <h1>@Model.Name @Model.Fname</h1>
+    <p class="title">CEO & Founder, Example</p>
+    <p class="title">@Model.Mobile</p>
+    <p class="title">@Model.Email</p>
+    <p>Harvard University</p>
+    <p>@Model.Description</p><br />
+    <p class="btn1">
+        <a href="@Url.Action("Student",new { Model.ID,Model.Name, Model.Fname, Model.Email, Model.Mobile, Model.Description, })" class="btn btn-primary">Edit</a>
+        <a href="@Url.Action("Delete",new { Model.ID})" class="btn btn-danger">Delete</a>
+        <a href="@Url.Action("StudentList",new { Model.ID})" class="btn btn-info">Back to List</a>
+
+    </p>
+</div>
+
+
+    @*<h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+    </dl>
+</div>*@
+
